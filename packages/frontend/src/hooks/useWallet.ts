@@ -11,13 +11,22 @@ export function useWallet() {
   const isConnecting = status === "connecting";
 
   const connectWallet = async () => {
-    // Try ArgentX first, then Braavos
-    const argentX = connectors.find((c) => c.id === "argentX");
-    const braavos = connectors.find((c) => c.id === "braavos");
+    // Find any available connector - try argent first, then braavos, then whatever is available
+    const argentX = connectors.find((c) => c.id === "argentX" || c.id === "argent" || c.name?.toLowerCase().includes("argent"));
+    const braavosC = connectors.find((c) => c.id === "braavos" || c.name?.toLowerCase().includes("braavos"));
     
-    const connector = argentX || braavos || connectors[0];
+    const connector = argentX || braavosC || connectors[0];
     if (connector) {
-      connect({ connector });
+      try {
+        await connect({ connector });
+      } catch (e) {
+        console.error("Connect error:", e);
+        // Try next connector if first fails
+        const fallback = connectors.find((c) => c !== connector);
+        if (fallback) {
+          await connect({ connector: fallback });
+        }
+      }
     }
   };
 

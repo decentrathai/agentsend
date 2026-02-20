@@ -87,7 +87,7 @@ export function useEncryptionKeys() {
           chainId: await account.getChainId(),
         },
         message: {
-          purpose: "Encryption Key Generation",
+          purpose: "keygen",
           description: KEY_DERIVATION_MESSAGE,
         },
       };

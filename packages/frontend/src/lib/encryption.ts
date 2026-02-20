@@ -37,7 +37,7 @@ export function deriveKeyPairFromSignature(walletSignature: string[]): KeyPair {
  * Request wallet to sign a deterministic message for key derivation
  * Call this when user first connects or needs to restore keys
  */
-export const KEY_DERIVATION_MESSAGE = "Sign this message to generate your AgentSend encryption keys. This signature will never be sent to any server.";
+export const KEY_DERIVATION_MESSAGE = "AgentSend keygen v1";
 
 /**
  * Encrypt a message for a specific recipient

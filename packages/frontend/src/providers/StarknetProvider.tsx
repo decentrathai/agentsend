@@ -1,18 +1,29 @@
 "use client";
 
-import { ReactNode } from "react";
-import { StarknetConfig, publicProvider } from "@starknet-react/core";
-import { sepolia } from "@starknet-react/chains";
+import React from "react";
+import { mainnet, sepolia } from "@starknet-react/chains";
+import {
+  StarknetConfig,
+  publicProvider,
+  argent,
+  braavos,
+  useInjectedConnectors,
+  voyager,
+} from "@starknet-react/core";
 
-interface StarknetProviderProps {
-  children: ReactNode;
-}
+export function StarknetProvider({ children }: { children: React.ReactNode }) {
+  const { connectors } = useInjectedConnectors({
+    recommended: [argent(), braavos()],
+    includeRecommended: "always",
+    order: "alphabetical",
+  });
 
-export function StarknetProvider({ children }: StarknetProviderProps) {
   return (
     <StarknetConfig
-      chains={[sepolia]}
+      chains={[mainnet, sepolia]}
       provider={publicProvider()}
+      connectors={connectors}
+      explorer={voyager}
       autoConnect
     >
       {children}
