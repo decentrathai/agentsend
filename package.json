@@ -1,0 +1,23 @@
+{
+  "name": "agentsend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AgentSend - Privacy Messenger on Starknet using Tongo SDK",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -ws",
+    "dev": "npm run dev -ws --if-present",
+    "test": "npm test -ws --if-present",
+    "clean": "rm -rf node_modules packages/*/node_modules packages/*/dist"
+  },
+  "keywords": ["starknet", "privacy", "messaging", "tongo", "zk"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0",
+    "tsx": "^4.7.0"
+  }
+}
