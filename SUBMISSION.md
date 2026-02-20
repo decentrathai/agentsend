@@ -238,7 +238,7 @@ git add .
 git commit -m "Initial commit - Starknet Re{define} Hackathon submission"
 
 # Add remote (replace with your GitHub URL)
-git remote add origin https://github.com/YOUR_USERNAME/agentsend.git
+git remote add origin https://github.com/decentrathai/agentsend.git
 git branch -M main
 git push -u origin main
 
@@ -270,7 +270,7 @@ NEXT_PUBLIC_APP_URL=https://agentsend.vercel.app
 
 1. Go to [vercel.com](https://vercel.com)
 2. Click "Add New Project"
-3. Import from GitHub: `YOUR_USERNAME/agentsend`
+3. Import from GitHub: `decentrathai/agentsend`
 4. Configure project:
    - **Framework Preset:** Next.js
    - **Root Directory:** `packages/frontend`

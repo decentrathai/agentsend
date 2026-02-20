@@ -167,7 +167,7 @@ export default function Home() {
             <p className="mt-2 text-xs">
               Open source on{" "}
               <a
-                href="https://github.com/yourusername/agentsend"
+                href="https://github.com/decentrathai/agentsend"
                 className="text-blue-600 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"

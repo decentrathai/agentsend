@@ -29,7 +29,7 @@ git commit -m "AgentSend - Privacy messaging on Starknet for Re{define} Hackatho
 
 # Create GitHub repository (via GitHub web or gh CLI)
 # Then add remote
-git remote add origin https://github.com/YOUR_USERNAME/agentsend
+git remote add origin https://github.com/decentrathai/agentsend
 git branch -M main
 git push -u origin main
 ```
@@ -273,7 +273,7 @@ censorship-resistant, and verifiable. Built with Next.js, TypeScript, and Tongo
 SDK for Starknet Re{define} Privacy Track.
 ```
 
-**GitHub URL:** https://github.com/YOUR_USERNAME/agentsend
+**GitHub URL:** https://github.com/decentrathai/agentsend
 
 **Demo URL:** https://agentsend-xxx.vercel.app
 

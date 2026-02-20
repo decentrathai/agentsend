@@ -112,7 +112,7 @@ AgentSend enables **completely private messaging** on Starknet by combining:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agentsend
+git clone https://github.com/decentrathai/agentsend
 cd agentsend
 
 # Install dependencies
@@ -356,7 +356,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ## 📞 Contact
 
-- **GitHub:** [yourusername/agentsend](https://github.com/yourusername/agentsend)
+- **GitHub:** [decentrathai/agentsend](https://github.com/decentrathai/agentsend)
 - **Demo:** [agentsend.vercel.app](https://agentsend.vercel.app) *(Coming Soon)*
 - **Hackathon:** [DoraHacks](https://dorahacks.io/hackathon/redefine)
 
